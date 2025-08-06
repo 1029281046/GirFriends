@@ -1,0 +1,16 @@
+name: Push Daily Message
+
+on:
+  schedule:
+    - cron: '30 7 * * *' # 每天上午 7:30 推送（UTC时间，东八区减8小时）
+  workflow_dispatch:
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Message
+        run: |
+          curl -X POST https://sctapi.ftqq.com/SCTxxxxxx.send \
+            -d "title=早安宝贝☀️" \
+            -d "desp=新的一天开始啦，记得吃早餐哦 ❤️"

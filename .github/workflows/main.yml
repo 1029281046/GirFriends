@@ -2,7 +2,7 @@ name: Daily Push To Girlfriend
 
 on:
   schedule:
-    - cron: '30 23 * * *'  # 每天 UTC 时间 23:30 = 北京时间早上 7:30
+    - cron: '*/1 * * * *'  # 每天 UTC 时间 23:30 = 北京时间早上 7:30
   workflow_dispatch:  # 允许你手动点击运行（首次必须手动触发一次）
 
 jobs:
@@ -11,4 +11,4 @@ jobs:
     steps:
       - name: Send Fixed Message
         run: |
-          curl "https://api2.pushdeer.com/message/push?pushkey=PDU36290TfLjpVkxhdpSx2OulaZzUhefzqC0R6eCZ&text=早安宝贝☀️&desp=今天又是爱你的一天❤️"
+          curl "https://api2.pushdeer.com/message/push?pushkey=PDU36290TfLjpVkxhdpSx2OulaZzUhefzqC0R6eCZ&text=郑苹☀️&desp=今天又是爱你的一天❤️"

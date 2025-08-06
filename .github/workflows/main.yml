@@ -1,16 +1,14 @@
-name: Push Daily Message
+name: Daily Push To Girlfriend
 
 on:
   schedule:
-    - cron: '30 7 * * *' # 每天上午 7:30 推送（UTC时间，东八区减8小时）
-  workflow_dispatch:
+    - cron: '30 23 * * *'  # 每天 UTC 时间 23:30 = 北京时间早上 7:30
+  workflow_dispatch:  # 允许你手动点击运行（首次必须手动触发一次）
 
 jobs:
-  send:
+  push:
     runs-on: ubuntu-latest
     steps:
-      - name: Send Message
+      - name: Send Fixed Message
         run: |
-          curl -X POST https://sctapi.ftqq.com/SCTxxxxxx.send \
-            -d "title=早安宝贝☀️" \
-            -d "desp=新的一天开始啦，记得吃早餐哦 ❤️"
+          curl "https://api2.pushdeer.com/message/push?pushkey=PDU36290TfLjpVkxhdpSx2OulaZzUhefzqC0R6eCZ&text=早安宝贝☀️&desp=今天又是爱你的一天❤️"

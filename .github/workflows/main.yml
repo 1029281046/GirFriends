@@ -11,4 +11,4 @@ jobs:
     steps:
       - name: Send Fixed Message
         run: |
-          curl "https://api2.pushdeer.com/message/push?pushkey=PDU36315TRuBBtm0SyEN6Hul82PS3HmAwLvhMXFeq&text=https://api2.pushdeer.com/message/push?pushkey=PDU36315TRuBBtm0SyEN6Hul82PS3HmAwLvhMXFeq&text=郑苹，我这不是道歉，这是献上一颗真心求原谅"
+          curl "https://api2.pushdeer.com/message/push?pushkey=PDU36315TRuBBtm0SyEN6Hul82PS3HmAwLvhMXFeq&text=https://api2.pushdeer.com/message/push?pushkey=PDU36315TRuBBtm0SyEN6Hul82PS3HmAwLvhMXFeq&text=郑苹，我爱你，不只今天，而是每一天"
